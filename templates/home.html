@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h1>Toronto & GTA History Quiz</h1>
+    <p>Each attempt gives you 5 random questions. Scores are saved to your account.</p>
+
+    {% if user.is_authenticated %}
+      <a class="btn" href="{% url 'quiz' %}">Start Quiz</a>
+    {% else %}
+      <a class="btn" href="{% url 'login' %}">Login</a>
+      <a class="btn secondary" href="{% url 'register' %}">Create Account</a>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Result</h2>
+    <p>Score: <strong>{{ attempt.score }}/{{ attempt.total }}</strong> ({{ attempt.percent }}%)</p>
+    <p><strong>{{ message }}</strong></p>
+    {% if can_retake %}
+      <a class="btn" href="{% url 'quiz' %}">Retake Quiz</a>
+    {% endif %}
+    <a class="btn secondary" href="{% url 'history' %}">See My Scores</a>
+  </div>
+{% endblock %}

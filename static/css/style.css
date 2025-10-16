@@ -1,0 +1,124 @@
+/* ================================
+   Toronto & GTA Quiz – Toronto Blue theme
+   Name: Russell, Abhinav, Arda
+   Student ID: C0927696, C0926240, C0923184
+   Date: August 14, 2025
+   ================================ */
+
+/* Color tokens (Toronto Blue Jays/City vibes) */
+:root{
+  --blue-900:#0b2a53;   /* deep navy */
+  --blue-700:#134a8e;   /* TORONTO BLUE (primary) */
+  --blue-600:#1d5fb4;   /* hover */
+  --blue-100:#e8f1fb;   /* light tint background */
+  --gray-900:#1f2937;
+  --gray-700:#374151;
+  --gray-400:#9ca3af;
+  --gray-200:#e5e7eb;
+  --gray-100:#f5f7fa;
+  --white:#ffffff;
+  --radius:12px;
+  --shadow:0 8px 24px rgba(16,24,40,.08);
+}
+
+/* Global layout */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--gray-900);
+  background:linear-gradient(180deg,var(--white),var(--blue-100));
+}
+
+/* Container */
+.container{
+  max-width:960px;
+  margin:24px auto 40px;
+  padding:0 16px;
+}
+
+/* Top nav */
+.nav{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:12px 16px;
+  border-bottom:1px solid var(--gray-200);
+  background:var(--white);
+  position:sticky; top:0; z-index:10;
+}
+.brand{
+  font-weight:700;
+  color:var(--blue-700);
+  margin-right:auto;
+  letter-spacing:.2px;
+}
+.nav a, .nav button.link{
+  color:var(--blue-700);
+  text-decoration:none;
+  font-weight:500;
+}
+.nav a:hover, .nav button.link:hover{color:var(--blue-600)}
+
+/* Cards */
+.card{
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  margin:16px 0;
+}
+
+/* Headings */
+h1,h2,h3{margin:0 0 8px}
+h1{font-size:28px}
+h2{font-size:22px;color:var(--blue-700)}
+p{margin:8px 0 12px}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid transparent;
+  background:var(--blue-700);
+  color:var(--white);
+  font-weight:600;
+  cursor:pointer;
+}
+.btn:hover{background:var(--blue-600)}
+.btn.secondary{
+  background:var(--white);
+  color:var(--blue-700);
+  border-color:var(--blue-700);
+}
+.btn.link{
+  background:none; border:none; padding:0; color:var(--blue-700);
+}
+
+/* Forms */
+form{display:block; margin-top:8px}
+input[type="text"], input[type="password"], input[type="email"]{
+  width:100%; padding:10px 12px; border:1px solid var(--gray-200);
+  border-radius:10px; outline:none;
+}
+input:focus{border-color:var(--blue-700); box-shadow:0 0 0 3px rgba(19,74,142,.12)}
+label{font-weight:600; display:block; margin:10px 0 6px}
+
+/* Quiz options */
+.option{margin:6px 0; display:block}
+
+/* Table (history) */
+.table{
+  width:100%; border-collapse:collapse; background:var(--white);
+  border-radius:12px; overflow:hidden; box-shadow:var(--shadow)
+}
+.table th, .table td{
+  padding:12px 14px; border-bottom:1px solid var(--gray-200); text-align:left
+}
+.table th{background:var(--blue-100); color:var(--blue-700)}
+
+/* Footer */
+.footer{margin-top:24px; color:var(--gray-400); font-size:13px; text-align:center}
